@@ -127,6 +127,7 @@ kubectl apply -f kubernetes/service.yaml
 //frontend/public/index.html에 아래 내용 복사후 수정.
 
 <!DOCTYPE html>
+```
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -148,13 +149,16 @@ kubectl apply -f kubernetes/service.yaml
     </noscript>
     <div id="app"></div>
     <!-- built files will be auto injected -->
-    ** <script src="http://[Gateway External IP]:8080/[dist 하위에 생성한 폴더 이름]/[dist 하위에 생성됐던 app.js 이름]"></script> **
+
+    // 해당 부분 <script> 예시 참조하여 수정
+    <script src="http://[Gateway External IP]:8080/[dist 하위에 생성한 폴더 이름]/[dist 하위에 생성됐던 app.js 이름]"></script> 
+
   </body>
 </html>
 
 // <script> 예시
 <script src="http://20.249.134.209:8080/paymentpbcfe/payment-system-app.js"></script>
-
+```
 
 ### 3.2 패키징, 도커라이징, 클러스터 배포
 

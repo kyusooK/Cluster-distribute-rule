@@ -148,7 +148,7 @@ kubectl apply -f kubernetes/service.yaml
     </noscript>
     <div id="app"></div>
     <!-- built files will be auto injected -->
-    ** <script src="http://[Gateway External IP]:8080/[dist 하위에 생성한 폴더 이름]/[dist 하위에 생성됐던 app.js 이름]"></script> **
+    <b><script src="http://[Gateway External IP]:8080/[dist 하위에 생성한 폴더 이름]/[dist 하위에 생성됐던 app.js 이름]"></script></b>
   </body>
 </html>
 

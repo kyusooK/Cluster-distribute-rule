@@ -123,7 +123,7 @@ kubectl apply -f kubernetes/service.yaml
 ### 3.1 index.html 수정
 
 #### Root Frontend의 경우 사용하는 PBC Frontend를 Single SPA로 동작하기 위해 web-component로 등록하는 작업을 필요로 한다. 따라서, index.html에 다음과 같이 사용하는 pbc에 대해 설정한다.
-```
+
 //frontend/public/index.html에 아래 내용 복사후 수정.
 
 <!DOCTYPE html>
@@ -148,13 +148,13 @@ kubectl apply -f kubernetes/service.yaml
     </noscript>
     <div id="app"></div>
     <!-- built files will be auto injected -->
-    <b><script src="http://[Gateway External IP]:8080/[dist 하위에 생성한 폴더 이름]/[dist 하위에 생성됐던 app.js 이름]"></script></b>
+    ** <script src="http://[Gateway External IP]:8080/[dist 하위에 생성한 폴더 이름]/[dist 하위에 생성됐던 app.js 이름]"></script> **
   </body>
 </html>
 
 // <script> 예시
 <script src="http://20.249.134.209:8080/paymentpbcfe/payment-system-app.js"></script>
-```
+
 
 ### 3.2 패키징, 도커라이징, 클러스터 배포
 

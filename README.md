@@ -27,8 +27,8 @@ docker push [REGISTRY_NAME].azurecr.io/[MICROSERVICE_NAME]:[오늘날짜]
 
 
 // deployment.yaml, service.yaml 클러스터 배포
-kubectl apply -f kubernetes/deployment.yaml
-kubectl apply -f kubernetes/service.yaml
+kubectl apply -f kubernetes/<확장자명을 포함한 deployment 파일 이름>
+kubectl apply -f kubernetes/<확장자명을 포함한 service 파일 이름>
 ```
 
 ### 1.2 Frontend 배포
@@ -63,8 +63,8 @@ spec:
       image: "[REGISTRY_NAME].azurecr.io/[dist 하위 생성한 폴더명]:[오늘날짜]"
 
 // 클러스터 배포
-kubectl apply -f kubernetes/deployment.yml
-kubectl apply -f kubernetes/service.yaml
+kubectl apply -f kubernetes/<확장자명을 포함한 deployment 파일 이름>
+kubectl apply -f kubernetes/<확장자명을 포함한 service 파일 이름>
 ```
 
 ## 2. gateway 배포
@@ -114,8 +114,8 @@ spec:
       image: "[REGISTRY_NAME].azurecr.io/gateway:[오늘날짜]"
 
 // 클러스터 배포
-kubectl apply -f kubernetes/deployment.yml
-kubectl apply -f kubernetes/service.yaml
+kubectl apply -f kubernetes/<확장자명을 포함한 deployment 파일 이름>
+kubectl apply -f kubernetes/<확장자명을 포함한 service 파일 이름>
 ```
 
 ## 3. Root Frontend 배포
@@ -185,6 +185,6 @@ spec:
       image: "[REGISTRY_NAME].azurecr.io/frontend:[오늘날짜]"
 
 // 클러스터 배포
-kubectl apply -f kubernetes/deployment.yml
-kubectl apply -f kubernetes/service.yaml
+kubectl apply -f kubernetes/<확장자명을 포함한 deployment 파일 이름>
+kubectl apply -f kubernetes/<확장자명을 포함한 service 파일 이름>
 ```
